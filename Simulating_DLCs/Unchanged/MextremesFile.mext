@@ -1,0 +1,44 @@
+-----  MExtremes v1.00.00g-mlb Input File  -------------------------------------------
+Test #00 (-Names, +Chans, +CC, +WrEEvtsTxt, -WrEEvtsXLS, +Multi).
+-----  Job Options  ------------------------------------------------------------
+false             EchoInp           Echo input to <rootname>.echo as this file is being read.
+false             StrNames          Use channel names following a "$" instead of numbers when specifying channels in this input file.
+"%12.4e"          RealFmt           Format for outputting floating-point values in the plain-text files.
+-----  Input-Data Layout  ------------------------------------------------------
+5                 TitleLine         The row with the file title on it (zero if no title is available).
+0                 NamesLine         The row with the channel names on it (zero if no names are available or are specified below).
+0                 UnitsLine         The row with the channel units on it (zero if no units are available or are specified below).
+9                 FirstDataLine     The first row of data.
+0               NumChans:         The number of channels in each input file.
+ChanTitle    ChanUnits    Scale  Offset	PSFtype     NumCols rows of data follow.  Title and units strings must be 10 characters or less.
+-----  Calculated Channels  ----------------------------------------------------
+0                 NumCChan          The number calculated channels to generate.
+1234567890        Seed              The integer seed for the random number generator (-2,147,483,648 to 2,147,483,647)
+Col_Title   Units    Equation       Put each field in quotes.  Titles and units are limited to 10 characters.  NumCChan rows of data follow.
+-----  Extreme Events  ---------------------------------------------------------
+3                 NumEETables       Number of tables of extreme events.  Must be > 0.
+0                 NumEECharts       Number of charts of extreme events.
+false             FindPeaks         Should we use the peak finder?
+1                 TimeChan          The time step channel (used for computing average extreme values, 0 for none)                 WSChan           The primary wind-speed channel (used for mean wind speed and turbulence intensity, 0 for none)
+2                 WSChan            The primary wind-speed channel (used for mean wind speed and turbulence intensity, 0 for none)
+0                 WSmin             Minimum wind speed value to consider when binning.  (Events associated with wind speeds less than WSmin will be ignored)
+31                WSmax             Maximum  wind speed value to consider when binning. (Events associated with wind speeds greater than WSmax will be ignored)
+2                 WSMaxBinSize      Maximum width of a wind-speed bin.
+false             ScatterPlots      Create scatter plots for each channel that appears in an Extreme Event table.  The x-axis is the wind speed (the windspeed bin value will be used for DLCs having BinMod > 0).
+1                 PlotFormat        Format for saving any of the requested ScatterPlots or Charts. [ 1 = PNG, 2 = MatLab figure ]
+true              WrEEvtsTxt        Write the extreme-event tables to a plain-text file?
+false             WrEEvtsXLS        Write the extreme-event tables to an Excel file?
+"xlsx"            XLStype           Type of Excel file ("xls"=>2003, "xlsx"=>2007).
+7                 ThemeColor        Excel color theme to use.  In Excel 2007, it is the column of the color chart (1-10).
+0.0               HeadTnS           Tint and shade of the header area (-1.0 to 1.0), with -1 being darkest and 1 lightest.
+0.5               DiagTnS           Tint and shade of the diagonal (-1.0 to 1.0), with -1 being darkest and 1 lightest.
+TableName           #Chans    ChanList                #InfoChans     InfoChanList    (NumEETables rows of data follow)
+"Tip Deflections"       6      7  8  9  10  11  12      3         1 2 5
+"Tower Clearances"      6      93 94 95 96  97  98                  3         1 2 5
+"Blade-1 Loads"         10     36 37 38 39 40 41 42 43 44 45              3         1 2 5
+ChartName         YLabel                                  Type       #Chans        ChanList
+-----  Input Files  ------------------------------------------------------------
+2		  FileFormat        Flag determining input file format.  1 = ascii, 2 = binary
+1                 NumDLCs           The number of Design Load Cases
+0  1.1   1.3   1.5   1.7  0  "Normal Operation"         (NumDLCfiles, PSF1, PSF2, PSF3, PSF4, BinModel, DLC_Name)
+==EOF==                             DO NOT REMOVE OR CHANGE.  MUST COME JUST AFTER LAST LINE OF VALID INPUT.

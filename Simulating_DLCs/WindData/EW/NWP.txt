@@ -1,0 +1,10 @@
+!HAND-WRITTEN FILE.
+ ! NORMAL WIND PROFILE
+!---------------------------------------------------------------
+!Stats for this wind file:
+!---------------------------------------------------------------
+ ! Time	Wind	Wind	Vertical	Horiz.	Pwr.Law	Lin.Vert.	Gust
+ !	Speed	Dir	Speed	Shear	Vert.Shr	Shear	Speed
+ ! (sec)	(m/s)	(Deg)	(m/s)				(m/s)
+    0.000	   %WINDSPEED%	    0.000	    0.000	    0.000	    0.200	    0.000	    0.000
+  630.000	   %WINDSPEED%	    0.000	    0.000	    0.000	    0.200	    0.000	    0.000
